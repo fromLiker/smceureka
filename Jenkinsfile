@@ -34,7 +34,7 @@ pipeline {
           sh 'docker image build -t ${DOCKERHUBNAME}/eureka .'
           // sh 'docker push ${DOCKERHUBNAME}/eureka'
           // sh 'docker run -d -p 8761:8761 --network smc-net --name smceureka ${DOCKERHUBNAME}/eureka'
-          sh 'docker run -d -p 8761:8761 --memory=400M --name smceureka ${DOCKERHUBNAME}/eureka'
+          sh 'docker run -d -p 8761:8761 --memory=400M --network smc-net --name SMC-Eureka ${DOCKERHUBNAME}/eureka'
         }
       }
     }
