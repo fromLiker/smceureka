@@ -7,5 +7,5 @@ ENV PROJECT_ARTIFACTID="smceureka" PROJECT_VERSION="0.0.1-SNAPSHOT"
 #当使用本地目录为源目录时，推荐使用 COPY
 COPY target/$PROJECT_ARTIFACTID-$PROJECT_VERSION.jar /smceureka/eureka.jar
 EXPOSE 8762
-# ENTRYPOINT ["java", "-jar", "/smceureka/eureka.jar"]
-ENTRYPOINT ["java","-Xms200m","-Xmx300m","-jar","/smceureka/eureka.jar"]
+ENTRYPOINT ["java", "-jar", "/smceureka/eureka.jar"]
+# ENTRYPOINT ["java","-Xms200m","-Xmx300m","-jar","/smceureka/eureka.jar"]
